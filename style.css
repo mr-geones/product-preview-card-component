@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+*, 
+*::before, 
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  --clr-bg: hsl(32, 38%, 92%);
+  --clr-bg-product: #fff;
+  --clr-main: hsl(158, 36%, 37%);
+  --clr-main-active: hsl(212, 21%, 14%);
+  --clr-text: gray;
+}
+
+body {
+  background-color: var(--clr-bg);
+}
+
+h1 {
+  font-family: 'Fraunces', serif;
+}
+
+p {
+  font-family: 'Montserrat', sans-serif;
+}
+
+a {
+  color: var(--clr-bg-product);
+}
+
+.wrapper {
+  max-width: 375px;
+  margin: 1em;
+  margin: 0 auto;
+}
+
+.hero {
+  border-radius: 10px;
+  margin: 1em;
+  padding: 70% 1.5em 1.5em 1.5em;
+  background-color: var(--clr-bg-product);
+  background-image: url("images/image-product-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.product__category {
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: .8rem;
+  letter-spacing: .3rem;
+  color: var(--clr-text);
+  margin-bottom: 1em;
+}
+
+.product__name {
+  line-height: 2rem;
+  margin-bottom: .5em;
+}
+
+.product__description {
+  font-size: .8rem;
+  line-height: 1.5rem;
+  color: var(--clr-text);
+  margin-bottom: 3em;
+}
+
+.price {
+  display: flex;
+  margin-bottom: 1em;
+}
+
+.price__current {
+  font-size: 2rem;
+  color: var(--clr-main);
+  font-family: 'Fraunces', serif;
+}
+
+.price__previous {
+  text-decoration: line-through;
+  font-size: .8rem;
+  color: var(--clr-text);
+  align-self: center;
+  margin-left: 9%;
+}
+
+.button__add_to_cart a {
+  background-color: var(--clr-main);
+  width: 100%;
+  text-align: center;
+  padding: 15px;
+  border-radius: 7px;
+  font-size: .9rem;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.button__add_to_cart a:hover {
+  background-color: var(--clr-main-active);
+}
+
+.button__add_to_cart img {
+  vertical-align: middle;
+}
+
+.button__add_to_cart span {
+  margin-left: .5em;
+}
+
+@media (min-width: 1000px) {
+  .wrapper {
+    max-width: 600px;
+  }
+
+  .hero {
+    padding: 1.5rem 1.5rem 1.5rem 50%;
+    background-color: var(--clr-bg-product);
+    background-image: url("images/image-product-desktop.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
